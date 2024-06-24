@@ -1,9 +1,9 @@
-Feature: Scorecard
+Feature: google page title
 
-@smoketest @uitest
-Scenario: scorecard page title test
+Scenario: check with the give word is matched with google page title or not
 	Given open "chrome" browser
-	When launch site
-	Then title should be contain "Live Cricket Score"
-	When close site
+	When launch google site
+	And  locate search box and enter a "virat kohli"
+	Then page title should contain "virat kohli"
+	Then close site
 	
