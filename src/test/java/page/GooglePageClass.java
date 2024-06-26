@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.FluentWait;
 
 public class GooglePageClass {
+	//page object model  
 	WebDriver driver;
 	FluentWait<WebDriver> wait;
 	
@@ -15,6 +16,7 @@ public class GooglePageClass {
    @FindBy(xpath="//textarea[@class='gLFyf']") private WebElement searchbox;
    
    //lizy initilization
+   
    public GooglePageClass(WebDriver driver,FluentWait<WebDriver> wait) {
 	   this.driver=driver;
 	   this.wait=wait;

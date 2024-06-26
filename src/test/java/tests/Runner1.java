@@ -2,10 +2,9 @@ package tests;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
-
+//linkin feature file to runner class
 @CucumberOptions(
-		features={"src\\test\\resources\\featurefiles\\feature1.feature,"
-				+ "src\\test\\resources\\featurefiles\\feature2.feature"},
+		features={"src\\test\\resources\\featurefiles\\feature1.feature"},
 		glue= {"gulecode"},
 		plugin= {"pretty","html:target\\googletitlereport"},
 		monochrome=true

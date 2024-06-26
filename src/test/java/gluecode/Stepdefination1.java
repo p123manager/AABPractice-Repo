@@ -13,6 +13,7 @@ import utilitypack.PropertFileUtility;
 import utilitypack.WebSiteUtility;
 
 public class Stepdefination1 {
+	//declaring global variable
 	String  expected_result="virat kohli";
 	public WebDriver driver;
 	 WebSiteUtility  wu = new WebSiteUtility();
@@ -22,10 +23,12 @@ public class Stepdefination1 {
 	
 	@Given("open {string} browser")
 	public void open_Browser(String browser_name) throws Exception {
+		//"driver" initilized
 		driver = wu.openBrowser(browser_name);
 		wu.browserMaximize(driver);
 		int x = Integer.parseInt(PropertFileUtility.getValueFromPropertyFile(pfpath, "maxwaitpersec"));
 		int y = Integer.parseInt(PropertFileUtility.getValueFromPropertyFile(pfpath, "intervalpermillsec"));
+		//"wait" initilized
 		wait=wu.defindExplicitWait(driver, x,y);
 
 	}
